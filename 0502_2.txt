@@ -1,0 +1,267 @@
+root@ubuntu-virtual-machine:~/바탕화면# cd
+root@ubuntu-virtual-machine:~# nano /etc/passwd
+root@ubuntu-virtual-machine:~# nano /etc/shadow
+root@ubuntu-virtual-machine:~# nano /etc/passwd
+root@ubuntu-virtual-machine:~# nano /etc/group
+root@ubuntu-virtual-machine:~# adduser poly1
+'poly1' 사용자를 추가 중...
+새 그룹 'poly1' (1001) 추가 ...
+새 사용자 'poly1' (1001) 을(를) 그룹 'poly1' (으)로 추가 ...
+'/home/poly1' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly1의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: Polytech1
+	방 번호 []: ^[[E^[[2~^[[5~
+	직장 전화번호 []: ^[[2~^[[B^Z
+[1]+  멈춤                  adduser poly1
+root@ubuntu-virtual-machine:~# adduser poly1
+adduser: 'poly1' 사용자는 이미 존재합니다.
+root@ubuntu-virtual-machine:~# poly2
+명령어 'poly2' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  deb polycpolyml의 명령어 ' (5.7.1-4ubuntu1)'
+  deb polypolyml의 명령어 ' (5.7.1-4ubuntu1)'
+Try: apt install <deb name>
+root@ubuntu-virtual-machine:~# adduser poly2
+'poly2' 사용자를 추가 중...
+새 그룹 'poly2' (1002) 추가 ...
+새 사용자 'poly2' (1002) 을(를) 그룹 'poly2' (으)로 추가 ...
+'/home/poly2' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly2의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: polytech2
+	방 번호 []: 509 
+	직장 전화번호 []: 02-333-4444
+	집 전화번호 []: 02-555-6666
+	기타 []: oo
+정보가 올바릅니까? [Y/n] y
+root@ubuntu-virtual-machine:~# nano /etc/group
+root@ubuntu-virtual-machine:~# adduser --uid 1111 poly3
+'poly3' 사용자를 추가 중...
+새 그룹 'poly3' (1111) 추가 ...
+새 사용자 'poly3' (1111) 을(를) 그룹 'poly3' (으)로 추가 ...
+'/home/poly3' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+새 암호 재입력: 
+죄송합니다. 암호가 일치하지 않습니다.
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly3의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []:     
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@ubuntu-virtual-machine:~# adduser --gid 1000 poly4
+'poly4' 사용자를 추가 중...
+새 사용자 'poly4' (1003) 을(를) 그룹 'ubuntu' (으)로 추가 ...
+'/home/poly4' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly4의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@ubuntu-virtual-machine:~# tail /etc/passwd
+geoclue:x:124:131::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+ubuntu:x:1000:1000:ubuntu,,,:/home/ubuntu:/bin/bash
+poly1:x:1001:1001::/home/poly1:/bin/bash
+poly2:x:1002:1002:polytech2,509,02-333-4444,02-555-6666,oo:/home/poly2:/bin/bash
+poly3:x:1111:1111:,,,:/home/poly3:/bin/bash
+poly4:x:1003:1000:,,,:/home/poly4:/bin/bash
+root@ubuntu-virtual-machine:~# adduser --home /newhome poly5
+'poly5' 사용자를 추가 중...
+새 그룹 'poly5' (1003) 추가 ...
+새 사용자 'poly5' (1004) 을(를) 그룹 'poly5' (으)로 추가 ...
+'/newhome' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly5의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@ubuntu-virtual-machine:~# tail /etc/passwd
+pulse:x:125:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+ubuntu:x:1000:1000:ubuntu,,,:/home/ubuntu:/bin/bash
+poly1:x:1001:1001::/home/poly1:/bin/bash
+poly2:x:1002:1002:polytech2,509,02-333-4444,02-555-6666,oo:/home/poly2:/bin/bash
+poly3:x:1111:1111:,,,:/home/poly3:/bin/bash
+poly4:x:1003:1000:,,,:/home/poly4:/bin/bash
+poly5:x:1004:1003:,,,:/newhome:/bin/bash
+root@ubuntu-virtual-machine:~# login
+ubuntu-virtual-machine 로그인: poly5
+암호: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+poly5@ubuntu-virtual-machine:~$ logout
+root@ubuntu-virtual-machine:~# adduser --shell /bin/csh poly5
+adduser: 'poly5' 사용자는 이미 존재합니다.
+root@ubuntu-virtual-machine:~# adduser --shell /bin csh poly6
+adduser: `csh' 사용자가 없습니다.
+root@ubuntu-virtual-machine:~# adduser --shell /bin /csh poly6
+adduser: `/csh' 사용자가 없습니다.
+root@ubuntu-virtual-machine:~# adduser --shell /bin/csh poly6
+'poly6' 사용자를 추가 중...
+새 그룹 'poly6' (1004) 추가 ...
+새 사용자 'poly6' (1005) 을(를) 그룹 'poly6' (으)로 추가 ...
+useradd: Warning: missing or non-executable shell '/bin/csh'
+'/home/poly6' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+poly6의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@ubuntu-virtual-machine:~# tail /etc/passwd
+gnome-initial-setup:x:126:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:127:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:128:134:Gnome Display Manager:/var/lib/gdm3:/bin/false
+ubuntu:x:1000:1000:ubuntu,,,:/home/ubuntu:/bin/bash
+poly1:x:1001:1001::/home/poly1:/bin/bash
+poly2:x:1002:1002:polytech2,509,02-333-4444,02-555-6666,oo:/home/poly2:/bin/bash
+poly3:x:1111:1111:,,,:/home/poly3:/bin/bash
+poly4:x:1003:1000:,,,:/home/poly4:/bin/bash
+poly5:x:1004:1003:,,,:/newhome:/bin/bash
+poly6:x:1005:1004:,,,:/home/poly6:/bin/csh
+root@ubuntu-virtual-machine:~# tail /etc/group
+pulse-access:x:133:
+gdm:x:134:
+lxd:x:135:ubuntu
+ubuntu:x:1000:
+sambashare:x:136:ubuntu
+poly1:x:1001:
+poly2:x:1002:
+poly3:x:1111:
+poly5:x:1003:
+poly6:x:1004:
+root@ubuntu-virtual-machine:~# passwd poly1
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+죄송합니다. 암호가 일치하지 않습니다.
+새 암호: 
+잘못된 비밀번호: 암호가 앞뒤 어느쪽에서 읽어도 같은 문맥입니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+root@ubuntu-virtual-machine:~# login
+ubuntu-virtual-machine 로그인: poly2
+암호: 
+`    
+로그인이 맞지 않습니다
+ubuntu-virtual-machine 로그인: poly1
+암호: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-35-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+poly1@ubuntu-virtual-machine:~$ logout
+root@ubuntu-virtual-machine:~# usermod --shell /bin/csh poly2
+root@ubuntu-virtual-machine:~# usermod --groups ubuntu poly2
+root@ubuntu-virtual-machine:~# nano /etc/group
+root@ubuntu-virtual-machine:~# nano /etc/passwd
+root@ubuntu-virtual-machine:~# nano /etc/group
+root@ubuntu-virtual-machine:~# ls /home
+poly1  poly2  poly3  poly4  poly6  ubuntu
+root@ubuntu-virtual-machine:~# ls /
+bin    dev   lib    libx32      melon    opt   run   srv       tmp
+boot   etc   lib32  lost+found  mnt      proc  sbin  swapfile  usr
+cdrom  home  lib64  media       newhome  root  snap  sys       var
+root@ubuntu-virtual-machine:~# userdel -r poly6
+userdel: poly6 mail spool (/var/mail/poly6) not found
+root@ubuntu-virtual-machine:~# ls /home
+poly1  poly2  poly3  poly4  ubuntu
+root@ubuntu-virtual-machine:~# nano /etc/passwd
