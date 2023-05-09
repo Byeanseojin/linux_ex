@@ -1,0 +1,99 @@
+root@ubuntu-virtual-machine:~# tail /etc/shadow
+hplip:*:19411:0:99999:7:::
+gdm:*:19411:0:99999:7:::
+ubuntu:$y$j9T$fZ4..Q6I/2JPmosDYMWbs0$guzuMp/DfaFAiVl.kEinlT6i2mnUJyPEDYvmborGGb8:19437:0:99999:7:::
+poly1:$y$j9T$zriMGevJGShDo8otwnatN1$loI9C3KRQduAyRDFaNcnI.L3lOl0D99c0XyhkXR.Fv5:19479:0:99999:7:::
+poly2:$y$j9T$x.LZXC3lYdGQXFn5.vCIV/$h0il6dP0nnyAQb9F66BOdSXitxZyxJJ/e.EORf6.Cv.:19479:10:30:10::20818:
+poly3:$y$j9T$NPrDBoZeWtkBIORr1m0Hy0$kKXuPTRPoKQngP1U9OxODJwUH9Q1p1T1zq1w16k2kF5:19479:0:99999:7:::
+poly4:$y$j9T$XvM55SNAf5935G9faFxvz0$35h3ezg457UBHyZHxJNIzepLhcGBxbF0PADOs6kd3N0:19479:0:99999:7:::
+poly5:$y$j9T$UTce3LO5ffH3ThOfMk5BJ.$PRGckbIL9fmrZrvEpuaqfyYIZmQyzVrOllBId2escK.:19479:0:99999:7:::
+hanbit1:$y$j9T$ziuRR/TNcdPXxd6i9kX7b0$zoEZon03ZZMROYZl7CuKIH..QmP2xdqF.OvSOM3WHl2:19479:0:99999:7:::
+habit2:$y$j9T$eBb6Zy.0.S3sKbw5IbW5j.$gMtZirxu1KnmcufdNEG/T6ga587CdGhwCxJeiRtefs3:19479:0:99999:7:::
+root@ubuntu-virtual-machine:~# chown poly1 mydata.txt
+root@ubuntu-virtual-machine:~# ls -l mydatda.txt
+ls: 'mydatda.txt'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@ubuntu-virtual-machine:~# ls -l mydata.txt
+-r-xrw-rw- 1 poly1 root 0  5월  9 09:25 mydata.txt
+root@ubuntu-virtual-machine:~# chown poly2.poly2
+chown: `poly2.poly2' 뒤에 명령어가 빠짐
+자세한 정보는 'chown --help'를 입력하십시오.
+root@ubuntu-virtual-machine:~# chow poly2.poly2 mydata.txt
+명령어 'chow' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  deb ctowcanna의 명령어 ' (3.7p3-17)'
+  deb chowncoreutils의 명령어 ' (8.32-4.1ubuntu1)'
+  deb cowfl-cow의 명령어 ' (0.6-4.2)'
+  deb showmailutils-mh의 명령어 ' (1:3.14-1)'
+  deb showmmh의 명령어 ' (0.4-4)'
+  deb shownmh의 명령어 ' (1.7.1-11)'
+Try: apt install <deb name>
+root@ubuntu-virtual-machine:~# ls -l mydata.txt
+-r-xrw-rw- 1 poly1 root 0  5월  9 09:25 mydata.txt
+root@ubuntu-virtual-machine:~# chgrp poly3 mydata.txt
+root@ubuntu-virtual-machine:~# chgrp root mydata.txt
+root@ubuntu-virtual-machine:~# ls -l mydata.txt
+-r-xrw-rw- 1 poly1 root 0  5월  9 09:25 mydata.txt
+root@ubuntu-virtual-machine:~# groups poly3
+poly3 : poly3
+root@ubuntu-virtual-machine:~# nano sample
+root@ubuntu-virtual-machine:~# cat sample
+리눅스 명령 연습중
+파일 허가권과 소유권에 대한 명령 실습중
+ls /var
+root@ubuntu-virtual-machine:~# ls -l sample
+-rw-r--r-- 1 root root 92  5월  9 10:16 sample
+root@ubuntu-virtual-machine:~# chmod u+x sample
+root@ubuntu-virtual-machine:~# ls -l sample
+-rwxr--r-- 1 root root 92  5월  9 10:16 sample
+root@ubuntu-virtual-machine:~# sample
+명령어 'sample' 을(를) 찾을 수 없습니다. 그러나 다음을 통해 설치할 수 있습니다:
+apt install barcode
+root@ubuntu-virtual-machine:~# ./sample
+./sample: 줄 1: 리눅스: 명령어를 찾을 수 없음
+./sample: 줄 2: 파일: 명령어를 찾을 수 없음
+backups  crash	local  log   metrics  run   spool
+cache	 lib	lock   mail  opt      snap  tmp
+root@ubuntu-virtual-machine:~# ls -l sample
+-rwxr--r-- 1 root root 92  5월  9 10:16 sample
+root@ubuntu-virtual-machine:~# chown poly_prof sample
+chown: 부적절한 사용자: `poly_prof'
+root@ubuntu-virtual-machine:~# chown ubuntu sample
+root@ubuntu-virtual-machine:~# chown ubuntu.ununtu sample
+chown: 부적절한 사용자: `ubuntu.ununtu'
+root@ubuntu-virtual-machine:~# chown ubuntu.ubuntu sample
+root@ubuntu-virtual-machine:~# ls -l sample
+-rwxr--r-- 1 ubuntu ubuntu 92  5월  9 10:16 sample
+root@ubuntu-virtual-machine:~# chmod 754 sample
+root@ubuntu-virtual-machine:~# ls -l sample
+-rwxr-xr-- 1 ubuntu ubuntu 92  5월  9 10:16 sample
+root@ubuntu-virtual-machine:~# su - ubuntu
+ubuntu@ubuntu-virtual-machine:~$ pwd
+/home/ubuntu
+ubuntu@ubuntu-virtual-machine:~$ ls -l  /root/sample
+ls: '/root/sample'에 접근할 수 없음: 허가 거부
+ubuntu@ubuntu-virtual-machine:~$ ls -ld /root
+drwx------ 17 root root 4096  5월  9 10:16 /root
+ubuntu@ubuntu-virtual-machine:~$ logout
+root@ubuntu-virtual-machine:~# mv sample ~ubuntu
+root@ubuntu-virtual-machine:~# ls -l sample
+ls: 'sample'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@ubuntu-virtual-machine:~# su - ubuntu
+ubuntu@ubuntu-virtual-machine:~$ ls -l sample
+-rwxr-xr-- 1 ubuntu ubuntu 92  5월  9 10:16 sample
+ubuntu@ubuntu-virtual-machine:~$ ls -ld /ubuntu
+ls: '/ubuntu'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+ubuntu@ubuntu-virtual-machine:~$ ls -ld / home/ubuntu
+ls: 'home/ubuntu'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+drwxr-xr-x 22 root root 4096  5월  2 10:13 /
+ubuntu@ubuntu-virtual-machine:~$ chmod 777 sample
+ubuntu@ubuntu-virtual-machine:~$ ls -l sample
+-rwxrwxrwx 1 ubuntu ubuntu 92  5월  9 10:16 sample
+ubuntu@ubuntu-virtual-machine:~$ chown root.root samle
+chown: 'samle'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+ubuntu@ubuntu-virtual-machine:~$ logout
+root@ubuntu-virtual-machine:~# cd
+root@ubuntu-virtual-machine:~# mkdir linkdir
+root@ubuntu-virtual-machine:~# cd linkdir/
+root@ubuntu-virtual-machine:~/linkdir# nano originalfile
+root@ubuntu-virtual-machine:~/linkdir# cat originalfile
+링크시킬 원본 파일을 작성합니다.
+root@ubuntu-virtual-machine:~/linkdir# 
