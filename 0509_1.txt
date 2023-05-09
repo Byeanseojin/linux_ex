@@ -1,0 +1,20 @@
+root@ubuntu-virtual-machine:~#  chmod 777 mydata.txt
+root@ubuntu-virtual-machine:~# ls -l mydat.txt
+ls: 'mydat.txt'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@ubuntu-virtual-machine:~# chmod 644 mydata.txt
+root@ubuntu-virtual-machine:~# ls -l mydat.txt
+ls: 'mydat.txt'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+root@ubuntu-virtual-machine:~# chmod u+x mydata.txt
+root@ubuntu-virtual-machine:~# ls - l mydata.txt
+ls: '-'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+ls: 'l'에 접근할 수 없음: 그런 파일이나 디렉터리가 없습니다
+mydata.txt
+root@ubuntu-virtual-machine:~# chmod u-w mydata.txt
+root@ubuntu-virtual-machine:~# ls -l mydata.txt
+-r-xr--r-- 1 root root 0  5월  9 09:25 mydata.txt
+root@ubuntu-virtual-machine:~# ls -l mydata.txt
+-r-xr--r-- 1 root root 0  5월  9 09:25 mydata.txt
+root@ubuntu-virtual-machine:~# chmod g+w mydata.txt
+root@ubuntu-virtual-machine:~# ls -l mydata.txt
+-r-xrw-r-- 1 root root 0  5월  9 09:25 mydata.txt
+root@ubuntu-virtual-machine:~# 
