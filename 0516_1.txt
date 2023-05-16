@@ -1,0 +1,18 @@
+root@ubuntu-virtual-machine:~/바탕화면# cd
+root@ubuntu-virtual-machine:~# yes > /dev/null
+^C
+root@ubuntu-virtual-machine:~# yes > /dev/null
+^Z
+[1]+  멈춤                  yes > /dev/null
+root@ubuntu-virtual-machine:~# bg
+[1]+ yes > /dev/null &
+root@ubuntu-virtual-machine:~# jobs
+[1]+  실행중               yes > /dev/null &
+root@ubuntu-virtual-machine:~# fg 1
+yes > /dev/null
+^C
+root@ubuntu-virtual-machine:~# nano
+root@ubuntu-virtual-machine:~# nano &
+[1] 3213
+root@ubuntu-virtual-machine:~# fg 1
+nano
